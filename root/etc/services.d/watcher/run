@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+cd /app/watcher || exit
+
+exec \
+	s6-setuidgid abc python3 watcher.py --db /config/db/database.sqlite \
+	--conf /config/config.cfg --log /config/logs/ --plugins /config/plugins/
