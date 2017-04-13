@@ -14,7 +14,8 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 # linuxserver/watcher
 
-[![](https://images.microbadger.com/badges/image/linuxserver/watcher.svg)](http://microbadger.com/images/linuxserver/watcher "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/watcher.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/watcher.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-hub-built/linuxserver-watcher)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-hub-built/job/linuxserver-watcher/)
+[![](https://images.microbadger.com/badges/version/linuxserver/watcher.svg)](https://microbadger.com/images/linuxserver/watcher "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/linuxserver/watcher.svg)](http://microbadger.com/images/linuxserver/watcher "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/linuxserver/watcher.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/linuxserver/watcher.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io/linuxserver-watcher)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io/job/linuxserver-watcher/)
+
 
 [Watcher][appurl] is an automated movie NZB searcher and snatcher. You can add a list of wanted movies and Watcher will automatically send the NZB to Sabnzbd or NZBGet. Watcher also has basic post-processing capabilities such as renaming and moving.
 
