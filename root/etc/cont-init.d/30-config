@@ -1,7 +1,22 @@
 #!/usr/bin/with-contenv bash
 
 # make our folders
-mkdir -p /config{/db,/logs,/plugins/added,/plugins/finished,/plugins/snatched}
+mkdir -p /config{/db,/logs,/plugins/added,/plugins/finished,/plugins/snatched,/scripts}
+
+# copy scripts folder contents to /config/scripts
+# copy config files
+
+PREV_DIR=$(pwd)
+
+	cd /app/watcher/'post scripts' || exit
+	shopt -s globstar nullglob
+	for i in *
+ 	do
+	[[ ! -e "/config//scripts${i}" ]] && cp -Rv "${i}" "/config/scripts/${i}"
+	done
+
+cd "${PREV_DIR}" || exit
+
 
 # permissions
 chown -R abc:abc \
