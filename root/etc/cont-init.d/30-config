@@ -4,7 +4,6 @@
 mkdir -p /config{/db,/logs,/plugins/added,/plugins/finished,/plugins/snatched,/scripts}
 
 # copy scripts folder contents to /config/scripts
-# copy config files
 
 PREV_DIR=$(pwd)
 
