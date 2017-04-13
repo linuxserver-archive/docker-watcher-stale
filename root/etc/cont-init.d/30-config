@@ -10,8 +10,8 @@ PREV_DIR=$(pwd)
 	cd /app/watcher/'post scripts' || exit
 	shopt -s globstar nullglob
 	for i in *
- 	do
-	[[ ! -e "/config//scripts${i}" ]] && cp -Rv "${i}" "/config/scripts/${i}"
+	do
+	[[ ! -e "/config/scripts/${i}" ]] && cp -v "${i}" "/config/scripts/${i}"
 	done
 
 cd "${PREV_DIR}" || exit
