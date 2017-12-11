@@ -1,18 +1,18 @@
-FROM lsiobase/alpine:3.6
+FROM lsiobase/alpine:3.7
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="sparklyballs"
 
-# install build packages
 RUN \
+ echo "**** install build packages ****" && \
  apk add --no-cache --virtual=build-dependencies \
 	g++ \
 	gcc \
 	python3-dev && \
-
-# install runtime packages
+ echo "**** install runtime packages ****" && \
  apk add --no-cache \
 	git \
 	p7zip \
@@ -22,18 +22,14 @@ RUN \
 	unrar \
 	unzip \
 	xz && \
-
-# install pip packages
+ echo "**** install pip packages ****" && \
  pip3 install --no-cache-dir -U \
 	python-Levenshtein && \
-
-# install watcher
+ echo "**** install watcher ****" && \
  git clone https://github.com/nosmokingbandit/watcher3 /app/watcher && \
-
-# cleanup
+ echo "**** cleanup ****" && \
  apk del --purge \
 	build-dependencies && \
-
  rm -rf \
 	/root && \
  mkdir -p \
